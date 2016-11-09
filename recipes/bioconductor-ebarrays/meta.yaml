@@ -1,0 +1,32 @@
+package:
+  name: bioconductor-ebarrays
+  version: 2.38.0
+source:
+  fn: EBarrays_2.38.0.tar.gz
+  url: http://bioconductor.org/packages/release/bioc/src/contrib/EBarrays_2.38.0.tar.gz
+  md5: dc143c0344fff2436c6ea5698735297d
+build:
+  number: 0
+  rpaths:
+    - lib/R/lib/
+    - lib/
+requirements:
+  build:
+    - r
+    - r-lattice
+    - bioconductor-biobase
+    - r-r.methodss3
+    - r-cluster
+  run:
+    - r
+    - r-lattice
+    - bioconductor-biobase
+    - r-r.methodss3
+    - r-cluster
+test:
+  commands:
+    - '$R -e "library(''EBarrays'')"'
+about:
+  home: https://www.bioconductor.org/packages/release/bioc/html/EBarrays.html
+  license: 'GPL'
+  summary: 'EBarrays provides tools for the analysis of replicated/unreplicated microarray data.'

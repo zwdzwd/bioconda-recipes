@@ -1,0 +1,30 @@
+package:
+  name: bioconductor-ebcoexpress
+  version: 1.18.0
+source:
+  fn: EBcoexpress_1.18.0.tar.gz
+  url: https://bioconductor.org/packages/release/bioc/src/contrib/EBcoexpress_1.18.0.tar.gz
+  md5: bcbc591f9986b6a061fcaec84d3ccf91
+build:
+  number: 0
+  rpaths:
+    - lib/R/lib/
+    - lib/
+requirements:
+  build:
+    - r
+    - r-blockmodeling
+    - r-gplots
+    - r-testthat
+  run:
+    - r
+    - r-blockmodeling
+    - r-gplots
+    - r-testthat
+test:
+  commands:
+    - '$R -e "library(''EBcoexpress'')"'
+about:
+  home: https://www.bioconductor.org/packages/release/bioc/html/EBcoexpress.html
+  license: 'GPL'
+  summary: 'An Empirical Bayesian Approach to Differential Co-Expression Analysis at the Gene-Pair Level'
