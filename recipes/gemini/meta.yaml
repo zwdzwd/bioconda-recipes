@@ -59,6 +59,7 @@ requirements:
     - scipy
     - unidecode
     - grabix
+    - snappy
 
 test:
   commands:
