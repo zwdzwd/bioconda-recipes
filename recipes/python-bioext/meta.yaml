@@ -3,8 +3,8 @@ package:
   version: 0.17.4
 
 source:
-  git_rev: 0.17.4
-  git_url: https://github.com/veg/BioExt.git
+  url: https://github.com/veg/BioExt/archive/0.17.4.tar.gz
+  md5: c4564e2983037affcb6d55fd54ad84d4
   patches:
     - osx-freetype.patch # [osx]
 
