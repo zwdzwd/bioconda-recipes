@@ -9,14 +9,14 @@ source:
     - osx-freetype.patch # [osx]
 
 build:
-  number: 0
+  number: 1
   skip: True # [py27]
 
 requirements:
   build:
     - gcc  # [not osx]
     - llvm # [osx]
-    - freetype
+    - freetype {{CONDA_FREETYPE}}
     - python
     - setuptools
     - biopython
@@ -27,8 +27,8 @@ requirements:
     - python-consensuscore
 
   run:
-    - libgcc #[linux]
-    - freetype
+    - libgcc # [linux]
+    - freetype {{CONDA_FREETYPE}}
     - python
     - biopython
     - pysam <0.9

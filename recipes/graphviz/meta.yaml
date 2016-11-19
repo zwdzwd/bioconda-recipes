@@ -19,7 +19,7 @@ requirements:
     - libpng
     - libgd
     - libtiff
-    - freetype
+    - freetype {{CONDA_FREETYPE}}
     - jpeg
     - zlib
     - tk  # [osx]
@@ -28,7 +28,7 @@ requirements:
     - libpng
     - libgd
     - libtiff
-    - freetype
+    - freetype {{CONDA_FREETYPE}}
     - jpeg
     - zlib
     - tk  # [osx]

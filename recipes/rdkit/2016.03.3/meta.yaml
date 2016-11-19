@@ -10,7 +10,7 @@ source:
   sha256: 229b33e63be90b202b771007bd30e17dddb079a96415471ed7c66420ac28d93a
 
 build:
-  number: 0
+  number: 1
   skip: True # [win or py3k or osx]
   string: py{{CONDA_PY}}_boost{{CONDA_BOOST}}_{{PKG_BUILDNUM}}
 
@@ -22,7 +22,7 @@ requirements:
     - python
     - numpy >=1.7
     - pillow
-    - freetype
+    - freetype {{CONDA_FREETYPE}}
     - py2cairo # [linux and py2k]
   run:
     - python
