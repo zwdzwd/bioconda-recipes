@@ -10,24 +10,24 @@ requirements:
     - gcc # [not osx]
     - llvm # [osx]
     - zlib
-    - freetype
+    - freetype {{CONDA_FREETYPE}}
     - jpeg >=9* # use recent libjpeg
     - libpng
     - libtiff
     - xz
     - icu
-    - fontconfig >=2.11 # for libfontconfig.so
+    - fontconfig {{CONDA_FONTCONFIG}}
     
   run:
     - libgcc # [not osx]
     - zlib
-    - freetype
+    - freetype {{CONDA_FREETYPE}}
     - jpeg >=9* # use recent libjpeg
     - libpng
     - libtiff
     - xz
     - icu
-    - fontconfig >=2.11 # for libfontconfig.so
+    - fontconfig {{CONDA_FONTCONFIG}}
 
 source:
   fn: libgd-2.2.3.tar.gz
