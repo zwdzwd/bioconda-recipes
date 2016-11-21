@@ -1,4 +1,4 @@
-{% set CONDA_BOOST = "1.57.*" %}
+{% set CONDA_BOOST = "1.57" %}
 
 package:
   name: rdkit
@@ -20,7 +20,7 @@ requirements:
     - llvm  # [osx]
     - cmake # [unix]
     - requests
-    - boost >=1.48.0,{{CONDA_BOOST}}
+    - boost >=1.48.0,{{CONDA_BOOST}}*
     - python
     - numpy >=1.7
     - pillow
@@ -30,7 +30,7 @@ requirements:
     - python
     - libgcc  # [linux]
     - numpy >=1.7
-    - boost >=1.48.0,{{CONDA_BOOST}}
+    - boost >=1.48.0,{{CONDA_BOOST}}*
     - pillow
 
 test:
