@@ -12,14 +12,14 @@ requirements:
     - gcc       # [linux]
     - llvm      # [osx]
     - jpeg
-    - libpng
+    - libpng {{ CONDA_LIBPNG }}
     - libtiff
     - zlib
     - cmake
   run:
     - zlib
     - jpeg
-    - libpng
+    - libpng {{ CONDA_LIBPNG }}
     - libtiff
 test:
   commands:

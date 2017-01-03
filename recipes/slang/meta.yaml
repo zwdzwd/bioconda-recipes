@@ -16,12 +16,12 @@ requirements:
   build:
     - readline
     - ncurses {{CONDA_NCURSES}}*
-    - libpng
+    - libpng {{ CONDA_LIBPNG }}
     - zlib
   run:
     - readline
     - ncurses {{CONDA_NCURSES}}*
-    - libpng
+    - libpng {{ CONDA_LIBPNG }}
     - zlib
 
 test:

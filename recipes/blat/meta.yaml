@@ -12,10 +12,10 @@ build:
 
 requirements:
   build:
-    - libpng
+    - libpng {{ CONDA_LIBPNG }}
     - zlib
   run:
-    - libpng
+    - libpng {{ CONDA_LIBPNG }}
     - zlib
 about:
   home: https://genome.ucsc.edu/FAQ/FAQblat.html

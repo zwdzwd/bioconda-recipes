@@ -11,8 +11,8 @@ requirements:
     - llvm # [osx]
     - zlib
     - freetype
-    - jpeg >=9* # use recent libjpeg
-    - libpng
+    - jpeg {{CONDA_JPEG}}
+    - libpng {{ CONDA_LIBPNG }}
     - libtiff
     - xz
     - icu
@@ -22,8 +22,8 @@ requirements:
     - libgcc # [not osx]
     - zlib
     - freetype
-    - jpeg >=9* # use recent libjpeg
-    - libpng
+    - jpeg {{CONDA_JPEG}}
+    - libpng {{ CONDA_LIBPNG }}
     - libtiff
     - xz
     - icu

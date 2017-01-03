@@ -11,14 +11,14 @@ requirements:
   build:
     - gcc       # [linux]
     - llvm      # [osx]
-    - libpng
+    - libpng {{ CONDA_LIBPNG }}
     - jpeg
     - libtiff
     - zlib
     - leptonica
   run:
     - libgcc    # [linux]
-    - libpng
+    - libpng {{ CONDA_LIBPNG }}
     - jpeg
     - libtiff
     - zlib

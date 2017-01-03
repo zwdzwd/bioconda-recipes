@@ -16,14 +16,14 @@ build:                                                                          
 
 requirements:
     build:
-        - libpng                                                    # [linux]
+        - libpng {{ CONDA_LIBPNG }}                                                    # [linux]
         - mysql                                                     # [linux]
         - zlib                                                      # [linux]
         - openssl                                                   # [linux]
         - gcc
 
     run:                                                            # [linux]
-        - libpng                                                    # [linux]
+        - libpng {{ CONDA_LIBPNG }}                                                    # [linux]
         - mysql                                                     # [linux]
         - zlib                                                      # [linux]
         - openssl                                                   # [linux]

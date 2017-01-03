@@ -16,7 +16,7 @@ build:
 requirements:
   build:
     - gcc
-    - libpng
+    - libpng {{ CONDA_LIBPNG }}
     - libgd
     - libtiff
     - freetype
@@ -25,7 +25,7 @@ requirements:
     - tk  # [osx]
   run:
     - libgcc
-    - libpng
+    - libpng {{ CONDA_LIBPNG }}
     - libgd
     - libtiff
     - freetype
