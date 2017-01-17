@@ -1,33 +1,37 @@
 package:
-  name: "umi_tools"
-  version: "0.2.3"
+  name: umi_tools
+  version: "0.3.2"
+
 source:
-  fn: v0.2.3.tar.gz
-  url: https://github.com/CGATOxford/UMI-tools/archive/v0.2.3.tar.gz
-  md5: ebf34023a9fedb0ce87a0b74e3e655a8
+  git_url: https://github.com/CGATOxford/UMI-tools.git
+  git_rev: 0.3.2
+
 build:
-  number: 2
-  skip: True # [py2k]
+  number: 0
+  skip: False
+  entry_points:
+    - umi_tools = umi_tools.umi_tools:main
+
 requirements:
   build:
     - python
-    - setuptools >=1.1
     - cython >=0.19
-    - numpy >=1.7
-    - pandas >=0.12.0
     - pysam >=0.8.4
-    - future
+    - setuptools >=10.0 
   run:
     - python
     - cython >=0.19
-    - numpy >=1.7
-    - pandas >=0.12.0
     - pysam >=0.8.4
+    - pandas >=0.12.0
     - future
+    - setuptools >=10.0
+
 test:
   commands:
     - umi_tools --help
+    - umi_tools extract --help
+    - umi_tools dedup --help
 about:
   home: https://github.com/CGATOxford/UMI-tools
-  license: MIT License
-  summary: 'Tools for dealing with Unique Molecular Identifiers'
+  license: MIT
+  summary: "umi_tools is a python module for dealing with Unique Molecular Identifiers (UMIs) / Random Molecular Tags (RMTs)"
