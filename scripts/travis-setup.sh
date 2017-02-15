@@ -21,10 +21,14 @@ else
     tag=MacOSX
 fi
 
-# install conda
-curl -O https://repo.continuum.io/miniconda/Miniconda3-latest-$tag-x86_64.sh
-sudo bash Miniconda3-latest-$tag-x86_64.sh -b -p /anaconda
-sudo chown -R $USER /anaconda
+# install conda if it is not yet cached
+if [ ! -d /anaconda ]
+then
+  curl -O https://repo.continuum.io/miniconda/Miniconda3-latest-$tag-x86_64.sh
+  sudo bash Miniconda3-latest-$tag-x86_64.sh -b -p /anaconda
+  sudo chown -R $USER /anaconda
+fi
+
 export PATH=/anaconda/bin:$PATH
 conda install -y conda=4.2.15
 
