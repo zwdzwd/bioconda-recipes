@@ -30,7 +30,7 @@ then
 fi
 
 export PATH=/anaconda/bin:$PATH
-conda install -y conda=4.2.15
+conda install -y conda=4.2.15=py35_0
 
 $SCRIPT_DIR/../simulate-travis.py --set-channel-order
 $SCRIPT_DIR/../simulate-travis.py --install-requirements
