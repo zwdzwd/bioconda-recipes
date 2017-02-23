@@ -8,8 +8,19 @@ source:
   url: https://pypi.python.org/packages/a0/a2/8a763d99a0e5dfce08193d7ec4a42c6253e585b13b0a7813f92ae489f395/pyBigWig-0.3.3.tar.gz
 
 build:
-  number: 0
+  number: 1
   skip: False
+
+env:
+  matrix:
+    CONDA_NPY:
+      - 110
+      - 111
+      - 112
+    CONDA_PY:
+      - 27
+      - 34
+      - 35
 
 requirements:
   build:
