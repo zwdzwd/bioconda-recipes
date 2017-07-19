@@ -1,11 +1,11 @@
 package:
   name: epic
-  version: "0.1.28"
+  version: "0.1.29"
 
 source:
-  fn: bioepic-0.1.28.tar.gz
-  url: https://files.pythonhosted.org/packages/e0/17/cc62a549c864c0a4b2ceceb08c1f73d9a5aebcf2579de640b85d7f8fe30a/bioepic-0.1.28.tar.gz
-  sha256: 282572e27269fc4ec22ebcc88fafaf9b5f2c806a8334eca5059c1a17b781c6cc
+  fn: bioepic-0.1.29.tar.gz
+  url: https://files.pythonhosted.org/packages/2f/ab/72ec1f6309c0f4e7c20da751eff52806183db4df89b4dccf1ec83f353cf2/bioepic-0.1.29.tar.gz
+  sha256: ffd8bfcf64e699a6bb2091be3b9e2548461ee993c89089795f46ce06f30904de
 
 build:
   number: 0
