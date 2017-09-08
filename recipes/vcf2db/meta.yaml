@@ -1,15 +1,15 @@
 package:
   name: vcf2db
-  version: '2017.04.12'
+  version: '2017.09.06'
 
 build:
   number: 0
   skip: True # [not py27]
  
 source:
-  fn: vcf2db-7dfc48a.tar.gz
-  url: https://github.com/quinlan-lab/vcf2db/archive/7dfc48a.tar.gz
-  md5: c9c98b6bdf38e838214fde198fb9a7d4
+  fn: vcf2db-96553db.tar.gz
+  url: https://github.com/quinlan-lab/vcf2db/archive/96553db.tar.gz
+  md5: 2a74320b19ca3f984a122630284f8389
 
 requirements:
   build:
@@ -22,7 +22,7 @@ requirements:
     - cyvcf2
     - numpy
     - peddy >=0.2.9
-    - geneimpacts >0.2.0
+    - geneimpacts >0.3.3
   run:
     - python
     - nomkl # [unix]
@@ -32,7 +32,7 @@ requirements:
     - cyvcf2
     - numpy
     - peddy >=0.2.9
-    - geneimpacts >0.2.0
+    - geneimpacts >0.3.3
 
 test:
   commands:
