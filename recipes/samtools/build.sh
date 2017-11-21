@@ -21,7 +21,5 @@ cd htslib*
 ./configure --prefix=$PREFIX --enable-libcurl CFLAGS="-I$PREFIX/include" LDFLAGS="-L$PREFIX/lib"
 make
 cd ..
-# Problem with ncurses from default channel we now get in bioconda so skip tview
-# https://github.com/samtools/samtools/issues/577
-./configure --prefix=$PREFIX --enable-libcurl --without-curses
-make install prefix=$PREFIX LIBS+=-lcrypto LIBS+=-lcurl
+./configure --prefix=$PREFIX --enable-libcurl --with-ncurses --without-ncursesw
+make install prefix=$PREFIX LIBS+=-lcrypto LIBS+=-lcurl LIBS+=-lncurses LIBS+=-ltinfo
