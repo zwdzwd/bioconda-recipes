@@ -1,0 +1,49 @@
+{% set version = "1.0.18" %}
+
+package:
+  name: pnnl-atlas
+  version: {{ version }}
+
+source:
+  fn: atlas-{{ version }}.tar.gz
+  url: https://github.com/pnnl/atlas/archive/v{{ version }}.tar.gz
+  md5: e0c59c8616f17b7182c438c99723d0c1
+
+build:
+  number: 0
+  entry_points:
+    - atlas = atlas.atlas:cli
+
+requirements:
+  build:
+    - python >=3.5
+    - setuptools
+    - snakemake
+    - bbmap ==37.17
+    - click
+    - pandas
+    - pyyaml
+
+  run:
+    - python >=3.5
+    - snakemake
+    - bbmap ==37.17
+    - click
+    - pandas
+    - pyyaml
+
+test:
+  commands:
+    # click requires a unicode locale
+    - LANG=C.UTF-8 atlas --help
+
+about:
+  home: https://github.com/pnnl/atlas
+  license: BSD-3
+  summary: A framework for assembly, annotation, and genomic binning of metagenomic and metatranscriptomic data.
+
+extra:
+  container:
+    # click requires a unicode locale when used with Python 3
+    # extended-base generates en_US.UTF-8 locale and sets LC_ALL, LANG properly
+    extended-base: true  # [py3k]
