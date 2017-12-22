@@ -10,10 +10,11 @@ about:
 source: 
   fn: miRge-2.0.tar.gz
   url: https://github.com/mhalushka/miRge-2.0/raw/master/dist/miRge-2.0.tar.gz
+  sha256: e7c989d8fc89ff15a122e490530d7279b8ba7a4fb9a61ebd3b0c1d48de9f09d4
 
 build:
   number: 0
-  script: $PYTHON setup.py install
+  script: $PYTHON setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   build:
@@ -27,7 +28,6 @@ requirements:
     - pandas 0.21.1
     - scikit-learn 0.18.1
     - reportlab 3.3.0
-#    - forgi 0.20
   run:
     - python
     - setuptools
@@ -39,5 +39,11 @@ requirements:
     - pandas 0.21.1
     - scikit-learn 0.18.1
     - reportlab 3.3.0
-#    - forgi 0.20
 
+extra:
+  skip-lints:
+    - uses_setuptools
+
+test:
+  imports:
+    - mirge
