@@ -1,0 +1,43 @@
+package:
+  name: mirge
+  version: '2.0'
+
+about:
+  home: https://github.com/mhalushka/miRge-2.0
+  license: MIT License
+  summary: 'comprehensive analysis of miRNA sequencing data'
+
+source: 
+  fn: miRge-2.0.tar.gz
+  url: https://github.com/mhalushka/miRge-2.0/raw/master/dist/miRge-2.0.tar.gz
+
+build:
+  number: 0
+  script: $PYTHON setup.py install
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - cutadapt 1.11
+    - biopython 1.68
+    - numpy 1.11.3
+    - scipy 0.17.0
+    - matplotlib 2.1.1
+    - pandas 0.21.1
+    - scikit-learn 0.18.1
+    - reportlab 3.3.0
+#    - forgi 0.20
+  run:
+    - python
+    - setuptools
+    - cutadapt 1.11
+    - biopython 1.68
+    - numpy 1.11.3
+    - scipy 0.17.0
+    - matplotlib 2.1.1
+    - pandas 0.21.1
+    - scikit-learn 0.18.1
+    - reportlab 3.3.0
+#    - forgi 0.20
+
