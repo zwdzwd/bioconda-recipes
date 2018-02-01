@@ -25,7 +25,6 @@ test:
   imports:
     - List::MoreUtils
     - List::MoreUtils::PP
-    - List::MoreUtils::XS
 
 about:
   home: https://metacpan.org/release/List-MoreUtils
