@@ -73,7 +73,6 @@ recipes/variant-effect-predictor
 recipes/cancerit-allelecount
 
 # osx failures
-recipes/breakdancer
 recipes/cgat-scripts
 recipes/perl-io-compress
 recipes/plastid
