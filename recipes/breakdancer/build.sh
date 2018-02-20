@@ -17,4 +17,4 @@ ${PREFIX}/bin/sed -i'' "s@use AlnParser;@use lib \"${BAM2CFG_LIB}\";\nuse AlnPar
 ln -s ${BAM2CFG_LIB}/bam2cfg.pl ${PREFIX}/bin
 
 ls -la ${PREFIX}/bin/bam2cfg.pl
-head ${PREFIX}/bin/bam2cfg.pl
+head -n 20 ${PREFIX}/bin/bam2cfg.pl
