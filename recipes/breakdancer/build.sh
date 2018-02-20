@@ -15,3 +15,6 @@ make install
 BAM2CFG_LIB=`dirname $( find ${PREFIX}/lib -name "bam2cfg.pl" )`
 ${PREFIX}/bin/sed -i'' "s@use AlnParser;@use lib \"${BAM2CFG_LIB}\";\nuse AlnParser;@" ${BAM2CFG_LIB}/bam2cfg.pl
 ln -s ${BAM2CFG_LIB}/bam2cfg.pl ${PREFIX}/bin
+
+ls -la ${PREFIX}/bin/bam2cfg.pl
+head ${PREFIX}/bin/bam2cfg.pl
