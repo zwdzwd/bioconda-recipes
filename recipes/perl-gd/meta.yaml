@@ -8,7 +8,7 @@ source:
 build:
   ##ignore_prefix_files: True
   number: 6
-  skip: True  # [osx]
+  skip: True
 
 requirements:
   build:
