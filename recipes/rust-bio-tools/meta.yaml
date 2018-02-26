@@ -16,7 +16,7 @@ source:
 requirements:
   build:
     - rust
-    - gcc <4.8.5
+    - gcc
     - zlib {{ CONDA_ZLIB }}*
   run:
     - zlib {{ CONDA_ZLIB }}*
