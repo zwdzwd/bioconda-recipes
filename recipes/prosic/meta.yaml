@@ -21,6 +21,10 @@ requirements:
     - rust >=1.21
     - gsl {{CONDA_GSL}}*
     - zlib {{CONDA_ZLIB}}*
+    # new cram dependencies for rust-htslib 0.16.0
+    - bzip2 {{ CONDA_BZIP2 }}*  # [linux]
+    - xz {{CONDA_XZ}}*
+    - clangdev
   run:
     - gsl {{CONDA_GSL}}*
     - libgcc # [not osx]
