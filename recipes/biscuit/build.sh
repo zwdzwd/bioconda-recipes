@@ -2,9 +2,8 @@
 
 mkdir -p $PREFIX/bin
 
-export CFLAGS="$CFLAGS -ltinfo" 
-
 make
+
 cp biscuit $PREFIX/bin
 cp scripts/QC.sh $PREFIX/bin
 
