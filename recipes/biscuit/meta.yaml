@@ -1,0 +1,36 @@
+{% set name = "BISCUIT" %}
+{% set version = "0.3.4.20180216" %}
+{% set hash = "16113917cba67dac2ac9f0f03b51408a85d0635f6b00344da3df9f866a122fbd" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/zwdzwd/biscuit/releases/download/v{{ version }}/release-source.zip
+  fn: release-source.zip
+  sha256: {{ hash }}
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - gcc   # [not osx]
+    - llvm  # [osx]
+    - zlib {{ CONDA_ZLIB }}*
+    # - ncurses {{ CONDA_NCURSES }}*
+
+  run:
+    - libgcc # [not osx]
+    - zlib {{ CONDA_ZLIB }}*
+    # - ncurses {{ CONDA_NCURSES }}*
+
+test:
+  commands:
+    - biscuit 2>&1 | grep 'Usage'
+
+about:
+  home: https://github.com/zwdzwd/biscuit
+  license: MIT
+  summary: 'Tools for mapping and analyzing bisulfite sequences.'
