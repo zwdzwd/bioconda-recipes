@@ -20,11 +20,13 @@ requirements:
     - llvm  # [osx]
     - zlib {{ CONDA_ZLIB }}*
     - ncurses {{ CONDA_NCURSES }}*
+    - curl
 
   run:
     - libgcc # [not osx]
     - zlib {{ CONDA_ZLIB }}*
     - ncurses {{ CONDA_NCURSES }}*
+    - curl
 
 test:
   commands:
