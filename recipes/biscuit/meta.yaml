@@ -1,6 +1,6 @@
 {% set name = "BISCUIT" %}
-{% set version = "0.3.4.20180216" %}
-{% set hash = "16113917cba67dac2ac9f0f03b51408a85d0635f6b00344da3df9f866a122fbd" %}
+{% set version = "0.3.5.20180313" %}
+{% set hash = "56f8eee700de8a484487a615f85bf4cfe651bc4159737293c9921486226ea637" %}
 
 package:
   name: {{ name|lower }}
@@ -19,12 +19,12 @@ requirements:
     - gcc   # [not osx]
     - llvm  # [osx]
     - zlib {{ CONDA_ZLIB }}*
-    # may be needed - ncurses {{ CONDA_NCURSES }}*
+    - ncurses {{ CONDA_NCURSES }}*
 
   run:
     - libgcc # [not osx]
     - zlib {{ CONDA_ZLIB }}*
-    # may be needed - ncurses {{ CONDA_NCURSES }}*
+    - ncurses {{ CONDA_NCURSES }}*
 
 test:
   commands:
